@@ -1,4 +1,4 @@
-DirWatcher Application
+#DirWatcher Application#
 
 Project Description
 
