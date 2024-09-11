@@ -4,130 +4,237 @@
 DirWatcher is a Node.js application designed to monitor a specified directory for changes and count occurrences of a configured magic string. It includes a REST API server and a long-running background task that performs directory monitoring and result logging.
 
 ### Components
-#### REST API Server: 
+**REST API Server:**
 Handles API requests for configuration, task control, and status updates.
-#### Long Running Background Task:
+**Long Running Background Task:**
 Monitors a directory at a scheduled interval, processes files, counts occurrences of a magic string, and tracks file changes.###
 
-
+---
 ## Features
 
- Monitor a directory at a scheduled interval.
+-Monitor a directory at a scheduled interval.
  
- Count occurrences of a magic string in files.
+-Count occurrences of a magic string in files.
  
- Track new files added and deleted files.
+-Track new files added and deleted files.
  
- Update monitoring configuration via REST API.
+-Update monitoring configuration via REST API.
  
- Start and stop the monitoring task via REST API.
- 
- Fetch task run details and status via REST API.
+-Start and stop the monitoring task via REST API.
 
+-Fetch task run details and status via REST API.
+
+---
 
 ## Prerequisites
 
- Node.js (v14 or later)
+**Node.js (v14 or later)**
 
- MongoDB
+**MongoDB**
 
- Git
+**Git**
 
+---
 
-## For Installation
+## Installation
 
 ### Node.js and npm
 
 Purpose: To run the server, handle REST API requests, and manage packages.
-Source: https://nodejs.org/en 
+Source: [node.js](https://nodejs.org/en)
 
 
-## For Installation
+## Depemdencies
 
-### Express.js
+1.**Express.js**
 
 Purpose: Used for setting up the API server and handling routing.
 
-#### Installation Command: npm install express
+Installation Command: 
+```bash
+ npm install express
+
+```
 
 
-### Mongoose
+2.**Mongoose**
 Purpose: For MongoDB object modeling and connecting to the MongoDB database.
 
-#### Installation Command: npm install mongoose
+Installation Command: 
+```bash 
+npm install mongoose
 
-### Chokidar
+```
+
+3.**Chokidar**
 Purpose: To monitor the directory and detect file changes.
 
-#### Installation Command: npm install chokidar
+Installation Command: 
+```bash
+npm install chokidar
 
+```
 
-### config Package
+4.**config Package**
 
 Purpose: To manage configurations for the application, allowing environment-based configuration settings.
 
-#### Installation Command: npm install config
+Installation Command: 
+```bash
 
-### Body-Parser
+npm install config
+
+```
+5.**Body-Parser**
 
 Purpose: To parse incoming request bodies in a middleware before handling them in the routes.
 
-#### Installation Command: npm install body-parser
+Installation Command: 
+```bash
+npm install body-parser
 
+```
 
-### Nodemon (Development Only)
+6.**Nodemon (Development Only)**
 
 Purpose: For automatically restarting the server when changes are detected during development.
-#### Installation Command: npm install --save-dev nodemon
+Installation Command: 
+```bash
 
+npm install --save-dev nodemon
 
-### MongoDB and MongoDB Compass
+```
+
+7.**MongoDB and MongoDB Compass**
 
 Purpose: MongoDB is the database used to store task run details and configurations. MongoDB Compass is a GUI for managing the database.
 
 Source: 
-MongoDB: https://www.mongodb.com/
-MongoDB Compass: https://www.mongodb.com/products/tools/compass
+MongoDB: (https://www.mongodb.com/)
+MongoDB Compass: (https://www.mongodb.com/products/tools/compass)
 
+
+
+## Execution Instructions
+
+### Step 1: Clone the repository
+Clone the repository to your local machine using the following command:
+
+```bash
+git clone https://github.com/Yuvarani-1/DirWatcher.git
+cd DirWatcher
+
+```
+
+Step 2: Install dependencies
+Install all necessary Node.js packages by running:
+
+```bash
+npm install
+
+```
+
+Step 3: Set up MongoDB
+Ensure MongoDB is installed and running on your local machine. If MongoDB is hosted locally, you can use the default MongoDB connection string. Otherwise, configure the connection string in the config/default.json file or in an .env file:
+
+```bash
+MONGODB_URI=mongodb://localhost:27017/dirwatcher
+
+```
+
+Step 4: Run the application
+In Development Mode
+To run the application in development mode (with auto-restart using nodemon), execute:
+
+```bash
+npm run dev
+
+```
+
+In Production Mode
+To run the application in production mode, use:
+
+```bash
+npm start
+
+```
+
+## Optional Setup (Nodemon)
+
+Nodemon is a development tool that automatically restarts the server when file changes are detected. To run the application using Nodemon:
+
+```bash
+nodemon server.js
+
+```
+You can install Nodemon globally using npm if it's not already installed:
+
+```bash
+npm install -g nodemon
+
+```
+
+Then, run the application in development mode:
+
+```bash
+nodemon server.js
+
+```
+---
 
 ## API Endpoints
-
 This application provides several REST API endpoints to manage task runs, configurations, and directory monitoring through the server. Below is the documentation of each API endpoint and its purpose.
 
 Base URL: http://localhost:3000
 
+
 ## Task Run Endpoints
-Create a New Task Run
+1.Create a New Task Run
 Endpoint: POST /task-runs
 Description: Starts a new task run and monitors the directory for changes.
+Response:
+200 OK: Returns the details of the created task run.
+400 Bad Request: If the request body is missing required fields.
 
-Stop a Task Run
+2.Stop a Task Run
 Endpoint: POST /task-runs/:id/stop
 Description: Stops the specified task run.
 Request Params:
 id: The ID of the task run to stop.
+Response:
+200 OK: Returns a success message.
+404 Not Found: If the task run with the given ID does not exist.
 
-Get All Task Runs
+3.Get All Task Runs
 Endpoint: GET /task-runs
 Description: Retrieves all task runs.
+Response:
+200 OK: Returns a list of all task runs.
 
-Get a Specific Task Run
+4.Get a Specific Task Run
 Endpoint: GET /task-runs/:id
 Description: Retrieves the details of a specific task run.
 Request Params:
 id: The ID of the task run to retrieve.
+Response:
+200 OK: Returns the details of the specified task run.
+404 Not Found: If the task run with the given ID does not exist.
 
 
 ## Configuration Endpoints
 
-Get Configurations
+1.Get Configurations
 Endpoint: GET /config
 Description: Fetches the current configuration settings.
+Response:
+200 OK: Returns the current configuration settings.
 
-Update Configuration
+2.Update Configuration
 Endpoint: PUT /config
 Description: Updates the configuration settings (e.g., directoryPath, magicString).
-
+Response:
+200 OK: Returns a success message if the update was successful.
+400 Bad Request: If the request body is missing required fields.
 
 ## Error Handling and Logging
 Errors are logged to the console and handled with appropriate HTTP status codes.
