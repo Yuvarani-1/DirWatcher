@@ -28,6 +28,7 @@ Monitors a directory at a scheduled interval, processes files, counts occurrence
 ## Prerequisites
 
  Node.js (v14 or later)
+<<<<<<< HEAD
 
  MongoDB
 
@@ -39,6 +40,12 @@ Monitors a directory at a scheduled interval, processes files, counts occurrence
 ### Node.js and npm
 Purpose: To run the server, handle REST API requests, and manage packages.
 Source: https://nodejs.org/en
+=======
+ MongoDB
+
+
+## For Installation
+>>>>>>> 5c667d1b713383c718d7a092d6f510bbd9656714
 
 
 ### Express.js
@@ -46,6 +53,7 @@ Purpose: Used for setting up the API server and handling routing.
 Installation Command: npm install express
 
 
+<<<<<<< HEAD
 ### Mongoose
 Purpose: For MongoDB object modeling and connecting to the MongoDB database.
 Installation Command: npm install mongoose
@@ -53,12 +61,37 @@ Installation Command: npm install mongoose
 ### Chokidar
 Purpose: To monitor the directory and detect file changes.
 Installation Command: npm install chokidar
+=======
+
+## API Endpoints
+
+## Configuration Endpoints
+
+### GET /config
+ See config.js for details.
+
+### PUT /config
+ See config.js for details.
+
+## Task Control Endpoints
+### POST /task-control
+ See taskRuns.js for details.
+
+## Task Run Endpoints
+### GET /task-runs
+ See taskRuns.js for details.
+
+## Status Endpoint
+### GET /task-status
+ See server.js for details.
+>>>>>>> 5c667d1b713383c718d7a092d6f510bbd9656714
 
 
 ### config Package
 Purpose: To manage configurations for the application, allowing environment-based configuration settings.
 Installation Command: npm install config
 
+<<<<<<< HEAD
 ### Body-Parser
 Purpose: To parse incoming request bodies in a middleware before handling them in the routes.
 Installation Command: npm install body-parser
@@ -146,6 +179,32 @@ Verify updating the configuration via the API.
 
 Deploy to a production environment and test all functionalities.
 
+=======
+## Error Handling and Logging
+Errors are logged to the console and handled with appropriate HTTP status codes.
+Task status and configuration updates are logged for auditing purposes.
+
+
+## Improvements
+### File Deletion Tracking: 
+Added tracking for deleted files.
+### Error Handling:
+Enhanced error handling and logging.
+### API Documentation: 
+Comprehensive documentation provided.
+
+## Database Schema Diagram
+
+Schema diagram for MongoDB design is included as schema.pdf.
+
+## Testing
+ Unit and integration tests are recommended for validating the application functionality.
+
+## Deployment
+
+Deploy to a production environment and test all functionalities.
+
+>>>>>>> 5c667d1b713383c718d7a092d6f510bbd9656714
 ## Contact
 For questions or issues, please contact yuvarani10101@gmail.com
  
