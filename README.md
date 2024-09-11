@@ -13,10 +13,15 @@ Monitors a directory at a scheduled interval, processes files, counts occurrence
 ## Features
 
  Monitor a directory at a scheduled interval.
+ 
  Count occurrences of a magic string in files.
+ 
  Track new files added and deleted files.
+ 
  Update monitoring configuration via REST API.
+ 
  Start and stop the monitoring task via REST API.
+ 
  Fetch task run details and status via REST API.
 
 
