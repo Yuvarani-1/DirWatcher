@@ -1,0 +1,3 @@
+THIS IS THE FILE I AM ADDING TO CHECK AND HERE IS THE MAGIC STRING : newMagicString.
+I am trying some kind of modification
+I am doing some modification

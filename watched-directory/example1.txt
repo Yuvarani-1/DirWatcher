@@ -1,0 +1,1 @@
+This File contains YOUR_MAGIC_STRING and should be detected.
