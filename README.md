@@ -193,34 +193,41 @@ Base URL: http://localhost:3000
 ## Task Run Endpoints
 **1.Create a New Task Run**
 
-***Endpoint:***POST /task-runs
+**Endpoint:**POST /task-runs
+**Description:**Starts a new task run and monitors the directory for changes.
 
-***Description:***Starts a new task run and monitors the directory for changes.
-***Response:***
+**Response:**
 200 OK: Returns the details of the created task run.
 400 Bad Request: If the request body is missing required fields.
 
 **2.Stop a Task Run**
-***Endpoint:***POST /task-runs/:id/stop
-***Description:***Stops the specified task run.
-***Request Params:***
+
+**Endpoint:**POST /task-runs/:id/stop
+**Description:**Stops the specified task run.
+**Request Params:**
 id: The ID of the task run to stop.
-***Response:***
+
+**Response:**
 200 OK: Returns a success message.
 404 Not Found: If the task run with the given ID does not exist.
 
 **3.Get All Task Runs**
-***Endpoint:*** GET /task-runs
-***Description:***Retrieves all task runs.
-***Response:***
+
+**Endpoint:** GET /task-runs
+
+**Description:**Retrieves all task runs.
+**Response:**
 200 OK: Returns a list of all task runs.
 
 **4.Get a Specific Task Run**
-***Endpoint:*** GET /task-runs/:id
-***Description:*** Retrieves the details of a specific task run.
-***Request Params:***
+
+**Endpoint:** GET /task-runs/:id
+**Description:**Retrieves the details of a specific task run.
+
+**Request Params:**
 id: The ID of the task run to retrieve.
-***Response:***
+
+**Response:**
 200 OK: Returns the details of the specified task run.
 404 Not Found: If the task run with the given ID does not exist.
 
@@ -236,6 +243,7 @@ Response:
 200 OK: Returns the current configuration settings.
 
 **2.Update Configuration**
+
 Endpoint: PUT /config
 
 Description: Updates the configuration settings (e.g., directoryPath, magicString).
