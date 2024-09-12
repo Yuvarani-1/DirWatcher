@@ -188,11 +188,6 @@ nodemon server.js
 ```
 ---
 
-## API Endpoints
-This application provides several REST API endpoints to manage task runs, configurations, and directory monitoring through the server. Below is the documentation of each API endpoint and its purpose.
-
-Base URL: http://localhost:3000
-
 
 ## Task Run Endpoints
 **1.Create a New Task Run**
@@ -279,10 +274,13 @@ Response:
 
 
 ## Improvements 
+
 **File Deletion Tracking:** 
 Added tracking for deleted files.
+
 **Error Handling:**
 Enhanced error handling and logging.
+
 **API Documentation:**
 Comprehensive documentation provided.
 
