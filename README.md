@@ -198,6 +198,7 @@ Base URL: http://localhost:3000
 **1.Create a New Task Run**
 
 **Endpoint:** POST /task-runs
+
 **Description:** Starts a new task run and monitors the directory for changes.
 
 **Response:**
@@ -207,7 +208,9 @@ Base URL: http://localhost:3000
 **2.Stop a Task Run**
 
 **Endpoint:** POST /task-runs/:id/stop
+
 **Description:** Stops the specified task run.
+
 **Request Params:**
 id: The ID of the task run to stop.
 
@@ -220,12 +223,14 @@ id: The ID of the task run to stop.
 **Endpoint:** GET /task-runs
 
 **Description:** Retrieves all task runs.
+
 **Response:**
 200 OK: Returns a list of all task runs.
 
 **4.Get a Specific Task Run**
 
 **Endpoint:** GET /task-runs/:id
+
 **Description:** Retrieves the details of a specific task run.
 
 **Request Params:**
