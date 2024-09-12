@@ -277,22 +277,18 @@ Response:
 
 400 Bad Request: If the request body is missing required fields.
 
-## Error Handling and Logging
-Errors are logged to the console and handled with appropriate HTTP status codes.
-Task status and configuration updates are logged for auditing purposes.
 
-
-## Improvements
-### File Deletion Tracking: 
+## Improvements 
+**File Deletion Tracking:** 
 Added tracking for deleted files.
-### Error Handling:
+**Error Handling:**
 Enhanced error handling and logging.
-### API Documentation: 
+**API Documentation:**
 Comprehensive documentation provided.
 
 ## Database Schema Diagram
 
-Schema diagram for MongoDB design is included as Database Schema.jpef.
+Schema diagram for MongoDB design is included as Database Schema.jpeg.
 
 ## API Endpoints
 
