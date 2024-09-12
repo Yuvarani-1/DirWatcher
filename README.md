@@ -327,19 +327,26 @@ This application provides several REST API endpoints to manage task runs, config
 **Task Runs API Tests**
 
 Verify if a new task run can be created.
+
 Test if the task run can be stopped.
+
 Check retrieval of all task runs.
+
 Verify retrieval of a specific task run by ID.
+
 
 **Configuration API Tests**
 
 Test the fetching of configuration settings.
+
 Verify updating the configuration via the API.
+
 
 ## Deployment
 
 Deploy to a production environment and test all functionalities.
 
 ## Contact
+
 For questions or issues, please contact yuvarani10101@gmail.com
  
