@@ -7,7 +7,7 @@ DirWatcher is a Node.js application designed to monitor a specified directory fo
 **REST API Server:**
 Handles API requests for configuration, task control, and status updates.
 **Long Running Background Task:**
-Monitors a directory at a scheduled interval, processes files, counts occurrences of a magic string, and tracks file changes.###
+Monitors a directory at a scheduled interval, processes files, counts occurrences of a magic string, and tracks file changes.
 
 ---
 ## Features
@@ -44,7 +44,7 @@ Purpose: To run the server, handle REST API requests, and manage packages.
 Source: [node.js](https://nodejs.org/en)
 
 
-## Depemdencies
+## Dependencies
 
 1.**Express.js**
 
@@ -206,6 +206,8 @@ Base URL: http://localhost:3000
 
 400 Bad Request: If the request body is missing required fields.
 
+
+
 **2.Stop a Task Run**
 
 **Endpoint:** POST /task-runs/:id/stop
@@ -216,9 +218,12 @@ Base URL: http://localhost:3000
 id: The ID of the task run to stop.
 
 **Response:**
+
 200 OK: Returns a success message.
 
 404 Not Found: If the task run with the given ID does not exist.
+
+
 
 **3.Get All Task Runs**
 
@@ -227,7 +232,10 @@ id: The ID of the task run to stop.
 **Description:** Retrieves all task runs.
 
 **Response:**
+
 200 OK: Returns a list of all task runs.
+
+
 
 **4.Get a Specific Task Run**
 
@@ -239,6 +247,7 @@ id: The ID of the task run to stop.
 id: The ID of the task run to retrieve.
 
 **Response:**
+
 200 OK: Returns the details of the specified task run.
 
 404 Not Found: If the task run with the given ID does not exist.
@@ -250,7 +259,9 @@ id: The ID of the task run to retrieve.
 
 Endpoint: GET /config.
 
-Description: Fetches the current configuration settings.
+Description:
+Fetches the current configuration settings.
+
 Response:
 200 OK: Returns the current configuration settings.
 
@@ -261,7 +272,9 @@ Endpoint: PUT /config
 Description: Updates the configuration settings (e.g., directoryPath, magicString).
 
 Response:
+
 200 OK: Returns a success message if the update was successful.
+
 400 Bad Request: If the request body is missing required fields.
 
 ## Error Handling and Logging
