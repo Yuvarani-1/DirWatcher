@@ -118,6 +118,7 @@ MongoDB Compass: [mongoDB Compass](https://www.mongodb.com/products/tools/compas
 ## Execution Instructions
 
 Step 1: Clone the repository
+
 Clone the repository to your local machine using the following command:
 
 ```bash
@@ -127,6 +128,7 @@ cd DirWatcher
 ```
 
 Step 2: Install dependencies
+
 Install all necessary Node.js packages by running:
 
 ```bash
@@ -136,6 +138,7 @@ npm install
 
 Step 3: 
 Set up MongoDB
+
 Ensure MongoDB is installed and running on your local machine. If MongoDB is hosted locally, you can use the default MongoDB connection string. Otherwise, configure the connection string in the config/default.json file or in an .env file:
 
 ```bash
@@ -145,6 +148,7 @@ MONGODB_URI=mongodb://localhost:27017/dirwatcher
 
 Step 4: 
 Run the application
+
 In Development Mode
 To run the application in development mode (with auto-restart using nodemon), execute:
 
