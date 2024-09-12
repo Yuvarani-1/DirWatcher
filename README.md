@@ -294,6 +294,40 @@ Comprehensive documentation provided.
 
 Schema diagram for MongoDB design is included as Database Schema.jpef.
 
+## API Endpoints
+
+This application provides several REST API endpoints to manage task runs, configurations, and directory monitoring. Below is the documentation of each API endpoint.
+
+### Base URL
+`http://localhost:3000`
+
+### Task Run Endpoints
+
+| Route                   | Method | Body | Description                                               | Sample Response |
+|-------------------------|--------|------|-----------------------------------------------------------|-----------------|
+| `/task-runs`            | POST   | `{ "directoryPath": "/path/to/dir", "magicString": "example" }` | Starts a new task run and monitors the directory for changes. | `{ "id": "12345", "status": "running", "directoryPath": "/path/to/dir", "magicString": "example" }` |
+| `/task-runs/:id/stop`   | POST   | -    | Stops the specified task run.                            | `{ "message": "Task run stopped successfully" }` |
+| `/task-runs`            | GET    | -    | Retrieves all task runs.                                 | `[ { "id": "12345", "status": "running", "directoryPath": "/path/to/dir", "magicString": "example" }, ... ]` |
+| `/task-runs/:id`        | GET    | -    | Retrieves the details of a specific task run.            | `{ "id": "12345", "status": "running", "directoryPath": "/path/to/dir", "magicString": "example" }` |
+
+### Configuration Endpoints
+
+| Route          | Method | Body                                                | Description                                                | Sample Response                         |
+|----------------|--------|-----------------------------------------------------|------------------------------------------------------------|-----------------------------------------|
+| `/config`      | GET    | -                                                   | Fetches the current configuration settings.                | `{ "directoryPath": "/path/to/dir", "magicString": "example" }` |
+| `/config`      | PUT    | `{ "directoryPath": "/new/path/to/dir", "magicString": "newString" }` | Updates the configuration settings (e.g., directoryPath, magicString). | `{ "message": "Configuration updated successfully" }` |
+
+### Error Handling and Logging
+
+- Errors are logged to the console and handled with appropriate HTTP status codes.
+- Task status and configuration updates are logged for auditing purposes.
+
+### Note
+- Replace `/path/to/dir`, `example`, and other placeholders with actual values specific to your application setup.
+- Ensure your server is running at `http://localhost:3000` or the appropriate base URL.
+
+
+
 ## Testing
 
 ### Task Runs API Tests
