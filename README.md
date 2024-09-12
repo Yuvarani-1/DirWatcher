@@ -203,6 +203,7 @@ Base URL: http://localhost:3000
 
 **Response:**
 200 OK: Returns the details of the created task run.
+
 400 Bad Request: If the request body is missing required fields.
 
 **2.Stop a Task Run**
@@ -216,6 +217,7 @@ id: The ID of the task run to stop.
 
 **Response:**
 200 OK: Returns a success message.
+
 404 Not Found: If the task run with the given ID does not exist.
 
 **3.Get All Task Runs**
@@ -238,6 +240,7 @@ id: The ID of the task run to retrieve.
 
 **Response:**
 200 OK: Returns the details of the specified task run.
+
 404 Not Found: If the task run with the given ID does not exist.
 
 
