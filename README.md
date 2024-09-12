@@ -324,7 +324,7 @@ This application provides several REST API endpoints to manage task runs, config
 
 ## Testing
 
-**Task Runs API Tests**
+**1.Task Runs API Tests**
 
 Verify if a new task run can be created.
 
@@ -335,7 +335,7 @@ Check retrieval of all task runs.
 Verify retrieval of a specific task run by ID.
 
 
-**Configuration API Tests**
+**2.Configuration API Tests**
 
 Test the fetching of configuration settings.
 
